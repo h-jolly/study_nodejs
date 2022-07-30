@@ -1,3 +1,4 @@
+// 현재 express 관련된 셋팅이 전부 한곳에 있음..
 const express = require('express');
 const nunjucks = require('nunjucks');
 const logger = require('morgan');
@@ -26,6 +27,7 @@ app.use('/uploads', express.static('uploads'));
 // Global View 변수
 app.use((req, res, next) => {
   app.locals.isLogin = false;
+  app.locals.req_path = req.path;
   next();
 });
 
@@ -42,6 +44,16 @@ function vipMiddleware(req, res, next) {
 // 라우팅
 app.use('/admin', vipMiddleware, admin);
 app.use('/contacts', contacts);
+
+// 에러
+app.use((req, res, _) => {
+  res.status(400).render('common/404.html');
+  // _ 사용하지 않는 변수
+});
+app.use((req, res, _) => {
+  res.status(500).render('common/500.html');
+  // _ 사용하지 않는 변수
+});
 
 app.listen(port, () => {
   console.log('Express listening on port', port);
