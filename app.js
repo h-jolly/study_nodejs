@@ -20,6 +20,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
+/// 정적 파일
+app.use('/uploads', express.static('uploads'));
+
+// 라우팅
 app.get('/', (req, res) => {
   res.send('hello express');
 });
