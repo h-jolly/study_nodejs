@@ -14,7 +14,8 @@
   </head>
   <body>
     <div class="container" style="padding-top: 100px">
-      {% block content %}{% endblock %}
+      {% if isLogin %} 로그인 중 {% else %} 로그인 안되어있음 {% endif %} {%
+      block content %}{% endblock %}
     </div>
   </body>
 </html>

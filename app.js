@@ -23,6 +23,12 @@ app.use(bodyParser.urlencoded({ extended: false }));
 /// 정적 파일
 app.use('/uploads', express.static('uploads'));
 
+// Global View 변수
+app.use((req, res, next) => {
+  app.locals.isLogin = false;
+  next();
+});
+
 // 라우팅
 app.get('/', (req, res) => {
   res.send('hello express');
