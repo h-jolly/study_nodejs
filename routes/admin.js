@@ -1,4 +1,5 @@
 const express = require('express');
+const { render } = require('nunjucks');
 const router = express.Router();
 
 // 미들
@@ -22,6 +23,15 @@ router.get('/products', (req, res) => {
     message: 'hello!!!!222',
     online: 'express',
   });
+});
+
+router.get('/products/write', (req, res) => {
+  res.render('admin/write.html');
+});
+
+router.post('/products/write', (req, res) => {
+  req.body.name;
+  res.send('adsf');
 });
 
 module.exports = router;
