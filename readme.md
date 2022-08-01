@@ -1,4 +1,4 @@
-[express!]
+### express!
 
 1. express 시작 - nodemon 사용시 서버 안 내려도 변경사항 확인 가능
 2. Routing
@@ -12,7 +12,7 @@
 10. nunjucks macro / 템플릿 엔진에서 유용한 기능
 11. Express 권장 구조
 
-[Sequelize]
+### Sequelize
 
 1. 프로젝트 설정
 2. dotenv 설정
@@ -24,3 +24,10 @@
 8. 상세페이지 보기
 9. DB 수정
 10. DB 삭제
+
+### Promise
+
+1. Callback Hell
+2. Promise 만들기
+3. Promise Chaining, Promise all
+4. async await
