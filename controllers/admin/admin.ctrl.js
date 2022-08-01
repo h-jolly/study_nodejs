@@ -1,5 +1,6 @@
-// controller 역할
+const models = require('../../models');
 
+// controller 역할
 exports.get_products = (_, res) => {
   res.render('admin/products.html', {
     message: 'hello',
@@ -10,6 +11,9 @@ exports.get_products_write = (_, res) => {
   res.render('admin/write.html');
 };
 
-exports.port_products_write = (req, res) => {
-  res.render(req.body);
+exports.post_products_write = (req, res) => {
+  // res.send(req.body);
+  models.Products.create(req.body).then(() => {
+    res.redirect('/admin/products');
+  });
 };

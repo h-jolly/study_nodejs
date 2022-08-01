@@ -17,9 +17,8 @@ function testMiddleWare2(req, res, next) {
 router.get('/', testMiddleWare, testMiddleWare2, (req, res) => {
   res.send('admin app');
 });
-
 router.get('/products', ctrl.get_products);
 router.get('/products/write', ctrl.get_products_write);
-router.post('/products/write', ctrl.port_products_write);
+router.post('/products/write', ctrl.post_products_write);
 
 module.exports = router;

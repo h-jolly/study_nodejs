@@ -30,8 +30,7 @@ router.get('/products/write', (req, res) => {
 });
 
 router.post('/products/write', (req, res) => {
-  req.body.name;
-  res.send('adsf');
+  res.send(req.body);
 });
 
 module.exports = router;
