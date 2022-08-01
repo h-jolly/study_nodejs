@@ -2,8 +2,11 @@ const models = require('../../models');
 
 // controller 역할
 exports.get_products = (_, res) => {
-  res.render('admin/products.html', {
-    message: 'hello',
+  // res.render('admin/products.html', {
+  //   message: 'hello',
+  // });
+  models.Products.findAll({}).then((products) => {
+    res.render('admin/products.html', { products });
   });
 };
 
