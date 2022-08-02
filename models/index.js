@@ -18,6 +18,7 @@ const config = {
     max: 0,
     idle: 10000,
   },
+  // logging: false
 };
 
 const sequelize = new Sequelize(DATABASE, DB_USER, DB_PASSWORD, config);

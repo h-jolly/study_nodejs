@@ -32,6 +32,11 @@
 3. Promise Chaining, Promise all
 4. async await
 
+### puppeteer
+
+자동으로 작업 진행
+크롤링~ 등 함께 사용
+
 ### 정리
 
 1. 학습한거 위주로 소스 개선

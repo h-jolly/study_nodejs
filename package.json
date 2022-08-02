@@ -17,6 +17,7 @@
     "morgan": "^1.10.0",
     "mysql2": "^2.3.3",
     "nunjucks": "^3.2.3",
+    "puppeteer": "^15.5.0",
     "sequelize": "^4.42.0",
     "uuid4": "^2.0.2"
   }

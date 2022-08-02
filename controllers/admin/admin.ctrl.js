@@ -20,7 +20,7 @@ exports.post_products_write = async (req, res) => {
 };
 
 exports.get_products_detail = async (req, res) => {
-  const product = models.Products.findByPk(req.params.id);
+  const product = await models.Products.findByPk(req.params.id);
   res.render('admin/detail.html', { product });
 };
 
