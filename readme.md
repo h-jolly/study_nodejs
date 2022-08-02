@@ -31,3 +31,9 @@
 2. Promise 만들기
 3. Promise Chaining, Promise all
 4. async await
+
+### 정리
+
+1. 학습한거 위주로 소스 개선
+2. 테스트 적용
+3. 코딩 위주가 아닌 관련 이론부분?? 공부하기
